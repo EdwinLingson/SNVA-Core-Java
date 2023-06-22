@@ -121,50 +121,7 @@ class ChatBot2 extends DisplayBalance2 {
         return new DisplayBalance2("No User","",0,null);
     }
 }
-class Address{
 
-    String name;
-    String doorNo;
-    String streetNo;
-    String locality;
-    int zipcode;
-    String mobile;
-    String telephone;
-
-    public Address(String name, String doorNo, String streetNo, String locality, int zipcode, String mobile, String telephone) {
-        this.name = name;
-        this.doorNo = doorNo;
-        this.streetNo = streetNo;
-        this.locality = locality;
-        this.zipcode = zipcode;
-        this.mobile = mobile;
-        this.telephone = telephone;
-    }
-    public Address(String name, String doorNo, String streetNo, String locality, int zipcode) {
-        this.name = name;
-        this.doorNo = doorNo;
-        this.streetNo = streetNo;
-        this.locality = locality;
-        this.zipcode = zipcode;
-    }
-
-    void updateAddress(String locality){
-        this.locality = locality;
-    }
-    void updateAddress(String mobile, String telephone){
-        this.mobile = mobile;
-        this.telephone = telephone;
-    }
-
-    void displayAddress(String name){
-        System.out.printf("Name: %s\t%s, %s, %s, %s, %d\nMobile:%s\t Telephone:%s\n",name,this.name,this.doorNo,streetNo,locality,zipcode,mobile,telephone);
-    }
-    @Override
-    public String toString() {
-        return "Name: " +name + " DoorNo: "+ doorNo + " streetNo: "+streetNo+ " locality: "+locality + " zipcode: "+ zipcode +
-                " mobile: " +mobile + " telephone: "+ telephone +'\n';
-    }
-}
 
 public class BankTaskV3 {
     public static void main(String[] args) {
