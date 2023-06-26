@@ -5,6 +5,8 @@ import corejava4.Address;
 import java.util.Scanner;
 
 class UserImpl extends Person implements User {
+    private int balance;
+    private Address address;
     public UserImpl(String userName, String password, int balance, Address address) {
         super(userName, password);
         this.balance = balance;
@@ -15,8 +17,7 @@ class UserImpl extends Person implements User {
         super(userName);
     }
 
-    private int balance;
-    private Address address;
+
 
     public Address getAddress() {
         return address;
@@ -49,15 +50,19 @@ class UserImpl extends Person implements User {
         System.out.printf("Username:%s\n", getUserName());
         address.displayAddress(getUserName());
     }
+    public void displayDetailsWithBalance() {
+        System.out.printf("Username:%s\n", getUserName());
+        address.displayAddress(getUserName());
+        System.out.println("Balance:" + getBalance());
+    }
 
     public void setBalance(int balance) {
         this.balance = balance;
     }
 
     @Override
-    boolean authenticate(String uname, String password) {
-        if (uname.equals(getUserName()) && password.equals(getPassword())) return true;
-        return false;
+    public boolean authenticate(String uname, String password) {
+        return uname.equals(getUserName()) && password.equals(getPassword());
     }
 
 }

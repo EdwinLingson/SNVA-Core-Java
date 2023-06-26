@@ -1,6 +1,6 @@
 package coreJava8;
 
-abstract class Person {
+abstract class Person implements Authenticate {
     private String userName;
     private String password;
 
@@ -29,5 +29,4 @@ abstract class Person {
         this.password = password;
     }
 
-    abstract boolean authenticate(String uname, String password);
 }

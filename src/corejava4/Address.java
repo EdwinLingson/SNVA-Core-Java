@@ -36,7 +36,10 @@ public class Address{
     }
 
     public void displayAddress(String name){
+        if(mobile!=null)
         System.out.printf("Name: %s\t%s, %s, %s, %s, %d\nMobile:%s\t Telephone:%s\n",name,this.name,this.doorNo,streetNo,locality,zipcode,mobile,telephone);
+        if(mobile==null)
+        System.out.printf("Name: %s\t%s, %s, %s, %s, %d\n",name,this.name,this.doorNo,streetNo,locality,zipcode);
     }
     public void displayAddress(String name,String type,String loginName){
         System.out.printf("Account Type: %s\nLogged in with Name: %s\nName of the account: %s\n%s, %s, %s, %s, %d\nMobile:%s\t Telephone:%s\n",type,loginName,name,this.name,this.doorNo,streetNo,locality,zipcode,mobile,telephone);
