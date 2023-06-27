@@ -1,10 +1,11 @@
 package coreJava8;
 
+import coreJava10.bankTask.TakeInput;
 import corejava4.Address;
 
 import java.util.Scanner;
 
-class UserImpl extends Person implements User {
+public class UserImpl extends Person implements User {
     private int balance;
     private Address address;
     public UserImpl(String userName, String password, int balance, Address address) {
@@ -46,6 +47,35 @@ class UserImpl extends Person implements User {
     }
 
     @Override
+    public void displayBalance() {
+        System.out.println("Do You want to display Balance:\n1.Yes\n2.No");
+        Integer knowBalance = TakeInput.nullCheck(TakeInput.readInteger());
+        switch (knowBalance) {
+            case 1:
+                System.out.println("Your balance is " + getBalance());
+                break;
+            case 2:
+                System.out.println("Thanks for Banking with us");break;
+            default:
+                System.out.println("Invalid Option");
+        }
+
+    }
+    public void displayBalance(Integer knowBalance) {
+
+        switch (knowBalance) {
+            case 1:
+                System.out.println("Your balance is " + getBalance());
+                break;
+            case 2:
+                System.out.println("Thanks for Banking with us");break;
+            default:
+                System.out.println("Invalid Option");
+        }
+
+    }
+
+    @Override
     public void displayDetails() {
         System.out.printf("Username:%s\n", getUserName());
         address.displayAddress(getUserName());
@@ -65,4 +95,8 @@ class UserImpl extends Person implements User {
         return uname.equals(getUserName()) && password.equals(getPassword());
     }
 
+    @Override
+    public void editUser() {
+
+    }
 }
