@@ -1,6 +1,6 @@
 package coreJava8;
 
-abstract class Person implements Authenticate {
+public abstract class Person implements Authenticate {
     private String userName;
     private String password;
 

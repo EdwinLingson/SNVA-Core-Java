@@ -125,6 +125,12 @@ public class Address{
         if(mobile==null)
         System.out.printf("Name: %s\t%s, %s, %s, %s, %d email:%s\n",name,this.name,this.doorNo,streetNo,locality,zipcode,email);
     }
+    public void displayAddress(){
+        if(mobile!=null)
+            System.out.printf("Address: %s, %s, %s, %s, %d\nMobile:%s\t Telephone:%s\temail:%s\n",this.name,this.doorNo,streetNo,locality,zipcode,mobile,telephone,email);
+        if(mobile==null)
+            System.out.printf("Address: %s, %s, %s, %s, %d email:%s\n",this.name,this.doorNo,streetNo,locality,zipcode,email);
+    }
     public void displayAddress(String name,String type,String loginName){
         System.out.printf("Account Type: %s\nLogged in with Name: %s\nName of the account: %s\n%s, %s, %s, %s, %d\nMobile:%s\t Telephone:%s\n",type,loginName,name,this.name,this.doorNo,streetNo,locality,zipcode,mobile,telephone);
     }

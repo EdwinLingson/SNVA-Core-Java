@@ -78,11 +78,11 @@ public class UserImpl extends Person implements User {
     @Override
     public void displayDetails() {
         System.out.printf("Username:%s\n", getUserName());
-        address.displayAddress(getUserName());
+        address.displayAddress();
     }
     public void displayDetailsWithBalance() {
         System.out.printf("Username:%s\n", getUserName());
-        address.displayAddress(getUserName());
+        address.displayAddress();
         System.out.println("Balance:" + getBalance());
     }
 
